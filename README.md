@@ -1,6 +1,6 @@
 <h1>Amped</h1>
 
-<img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/amped-logo.jpg" />
+<img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/amped-logo.jpg" height="320" width="320"/>
  
 Overview
 ========
