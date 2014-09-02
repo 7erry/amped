@@ -1,6 +1,7 @@
-<h1>Amped</h1>
+<h1>[Amped](https://slides.com/twalters/amped)</h1>
 
 <img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/amped-logo.jpg" height="320" width="320"/>
+
  
 Overview
 ========
