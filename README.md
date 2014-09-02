@@ -90,3 +90,5 @@ Amped-core
 Documentation
 ==============
 Please see [wiki] (https://github.com/7erry/amped/wiki) for detailed documentation.
+
+https://github.com/dropwizard/dropwizard
