@@ -6,9 +6,6 @@ Overview
 ========
 Amped is a Java-based, cloud-native, reference architecture using many Open Source projects including the following:
 
-
-Microservices
-
 * Dropwizard
   Executable Jar (embedded Jetty)
   Yaml externalized configuration
@@ -96,3 +93,6 @@ Documentation
 Please see [wiki] (https://github.com/7erry/amped/wiki) for detailed documentation.
 
 https://github.com/dropwizard/dropwizard
+https://github.com/dropwizard/metrics
+
+
