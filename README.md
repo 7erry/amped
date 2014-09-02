@@ -3,13 +3,7 @@
 Overview
 ========
 Amped is a Java-based, cloud-native, reference architecture using many Open Source projects including the following:
-AMPED!
 
-Simple goals:
-* Scale up only some parts of the application
-* Isolate services based depending on their security profiles (PII)
-* Fault tolerance
-* Cloud friendly
 
 Microservices
 
@@ -46,7 +40,7 @@ Microservices
 
 Architecture Overview
 =====================
-<img src="https://raw.github.com/7erry/amped/master/docs/images/amped--overview.jpg">
+<img src="https://raw.github.com/7erry/amped/master/docs/images/architecture.png">
 
 Real-time Metrics
 =================================
@@ -66,6 +60,11 @@ CloudWatch Dashboard
 
 Project Overview
 ================
+* Scale up only some parts of the application
+* Isolate services based depending on their security profiles (PII)
+* Fault tolerance
+* Cloud friendly
+
 The following project layout is typical of many distributed applications: 
 
 Amped-facade
