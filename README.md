@@ -1,4 +1,5 @@
-<h1>[Amped](https://slides.com/twalters/amped)</h1>
+<h1>Amped</h1>
+https://slides.com/twalters/amped
 
 <img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/amped-logo.jpg" height="320" width="320"/>
 
