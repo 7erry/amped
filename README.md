@@ -16,6 +16,7 @@ Amped is a Java-based, cloud-native, reference architecture using many Open Sour
   * [JDBI](http://www.jdbi.org) and [Hibernate](http://www.hibernate.org/) for databasin'.
   * [Liquibase](http://www.liquibase.org/) for migratin'.
   * [SPDY](http://www.chromium.org/spdy) for speedy web pagin'
+* [Swagger](https://github.com/wordnik/swagger-core/wiki/JavaDropwizard-Quickstart) for API documentin'
 * [Hazelcast](http://www.hazelcast.com) for cachin and all things distributed
   * Cache frequently accessed data in-memory, often in front of a database
   * Store temporal data like web sessions
