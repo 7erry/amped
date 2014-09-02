@@ -23,7 +23,7 @@ Amped is a Java-based, cloud-native, reference architecture using many Open Sour
   * In-memory data processing/analytics
   * Cross-JVM communication/shared storage
 * [Camel](http://camel.apache.org) for EIP'n
-  * Good for decomposition / Component based (plugins / routes)
+  * Good for decomposition / [Component](http://camel.apache.org/components.html) based (routes/components)
   * Service Orchestration
   * Cross-JVM communications
 * [MongoDB](http://www.mongodb.org/) for persistin
