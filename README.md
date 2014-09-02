@@ -1,5 +1,5 @@
-https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/amped-logo.jpg
-
+<img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/amped-logo.jpg" />
+ 
 Overview
 ========
 Amped is a Java-based, cloud-native, reference architecture using many Open Source projects including the following:
