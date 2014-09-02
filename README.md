@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/7erry/amped/master/docs/images/amped-logo.jpg">
+https://raw.githubusercontent.com/7erry/amped/master/docs/images/amped-logo.jpg
 
 Overview
 ========
