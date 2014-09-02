@@ -1,3 +1,5 @@
+<h1>Amped</h1>
+
 <img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/amped-logo.jpg" />
  
 Overview
