@@ -47,16 +47,19 @@ Real-time Metrics
 Hystrix Dashboard
 -----------------
 <img src="https://raw.github.com/7erry/amped/master/docs/images/amped-hystrix-dashboard.jpg">
+<href src="https://github.com/Netflix/Hystrix/tree/master/hystrix-dashboard"/>
 
 Historical Metrics
 =================================
 Graphite Dashboard
 ------------------
 <img src="https://raw.github.com/7erry/amped/master/docs/images/amped-graphite-dashboard.jpg">
+<href src="http://graphite.wikidot.com/"/>
 
 CloudWatch Dashboard
 --------------------
 <img src="https://raw.github.com/7erry/amped/master/docs/images/amped-cloudwatch-dashboard.jpg">
+<href src="http://aws.amazon.com/cloudwatch/"/>
 
 Project Overview
 ================
@@ -90,4 +93,4 @@ Documentation
 ==============
 Please see [wiki] (https://github.com/7erry/amped/wiki) for detailed documentation.
 
-https://github.com/dropwizard/dropwizard
+<href src="https://github.com/dropwizard/dropwizard"/>
