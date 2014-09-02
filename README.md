@@ -1,4 +1,4 @@
-<img src="https://raw.github.com/7erry/amped/master/docs/images/amped-logo.jpg">
+<img src="https://raw.githubusercontent.com/7erry/amped/master/docs/images/amped-logo.jpg">
 
 Overview
 ========
@@ -40,7 +40,7 @@ Microservices
 
 Architecture Overview
 =====================
-<img src="https://raw.github.com/7erry/amped/master/docs/images/architecture.png">
+<img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/architecture.png">
 
 Real-time Metrics
 =================================
