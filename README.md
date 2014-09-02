@@ -6,7 +6,7 @@ Overview
 ========
 Amped is a Java-based, cloud-native, reference architecture using many Open Source projects including the following:
 
-* Dropwizard
+* [Dropwizard](http://dropwizard.readthedocs.org/en/latest/getting-started.html) for microservin'
   * [Jetty](http://www.eclipse.org/jetty/) for HTTP servin'.
   * [Jersey](http://jersey.java.net/) for REST modelin'.
   * [Jackson](http://jackson.codehaus.org) for JSON parsin' and generatin'.
@@ -15,7 +15,7 @@ Amped is a Java-based, cloud-native, reference architecture using many Open Sour
   * [Metrics](http://metrics.codahale.com) for figurin' out what your application is doin' in production.
   * [JDBI](http://www.jdbi.org) and [Hibernate](http://www.hibernate.org/) for databasin'.
   * [Liquibase](http://www.liquibase.org/) for migratin'.
-  * [SPDY]() for improved web page performance
+  * [SPDY](http://www.chromium.org/spdy) for speedy web pagin'
 
 * [Hazelcast](http://www.hazelcast.com) for cachin and all things distributed
   * Cache frequently accessed data in-memory, often in front of a database
