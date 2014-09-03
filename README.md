@@ -98,6 +98,10 @@ Please see [wiki] (https://github.com/7erry/amped/wiki) for detailed documentati
 
 https://github.com/dropwizard/dropwizard
 <br/>
+http://www.slideshare.net/tomaslin/dropwizard-and-groovy
+<br/>
 https://github.com/dropwizard/metrics
+<br/>
+
 
 
