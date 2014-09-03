@@ -44,11 +44,11 @@ Architecture Overview
 
 Real-time Metrics
 =================================
-Hystrix Dashboard
+Metrics Dropwizard Dashboard
 -----------------
 <img src="https://raw.github.com/7erry/amped/master/docs/images/amped-hystrix-dashboard.jpg">
 <br/>
-https://github.com/Netflix/Hystrix/tree/master/hystrix-dashboard
+https://github.com/kimble/dropwizard-dashboard
 
 Historical Metrics
 =================================
