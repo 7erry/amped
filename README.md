@@ -103,6 +103,31 @@ http://www.slideshare.net/tomaslin/dropwizard-and-groovy
 https://github.com/dropwizard/metrics
 <br/>
 
+Requirements
+============
+mvn 3.x
+  $ mvn -version
+  Apache Maven 3.2.2 (45f7c06d68e745d05611f7fd14efb6594181933e; 2014-06-17T09:51:42-04:00)
+  Maven home: /Users/twalters/Documents/tools/apache-maven-3.2.2
+  Java version: 1.8.0_11, vendor: Oracle Corporation
+  Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home/jre
+  Default locale: en_US, platform encoding: UTF-8
+  OS name: "mac os x", version: "10.9.3", arch: "x86_64", family: "mac"
+
+java 8
+  $ java -version
+  java version "1.8.0_11"
+  Java(TM) SE Runtime Environment (build 1.8.0_11-b12)
+  Java HotSpot(TM) 64-Bit Server VM (build 25.11-b03, mixed mode)
+
+JAVA_HOME set
+  $ echo $JAVA_HOME
+  /Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home
+
+Tested on:
+OS X: 	10.9.3
+Ubuntu:	14.04.1 
+
 Execution
 =========
 * To package the helloworld run.
