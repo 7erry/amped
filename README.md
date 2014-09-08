@@ -108,6 +108,7 @@ Requirements
 *mvn 3.x
 <br/>
   $ mvn -version
+<br/>
   Apache Maven 3.2.2 (45f7c06d68e745d05611f7fd14efb6594181933e; 2014-06-17T09:51:42-04:00)
 <br/>
   Maven home: /Users/twalters/Documents/tools/apache-maven-3.2.2
@@ -138,7 +139,7 @@ Requirements
 
 <br/>
 Tested on:
-<br/>
+==========
 OS X: 	10.9.3
 <br/>
 Ubuntu:	14.04.1 
@@ -152,11 +153,11 @@ Execution
 
 * To setup the h2 database run.
 
-        java -jar target/amped-helloworld-0.8.0-SNAPSHOT.jar db migrate example.yml
+        java -jar target/amped-helloworld-0.7.1-SNAPSHOT.jar db migrate example.yml
 
 * To run the server run.
 
-        java -jar target/amped-helloworld-0.8.0-SNAPSHOT.jar server example.yml
+        java -jar target/amped-helloworld-0.7.1-SNAPSHOT.jar server example.yml
 
 * To hit the Hello World example (hit refresh a few times).
 
