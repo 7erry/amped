@@ -13,6 +13,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	<dropwizardVersion>0.7.1</dropwizardVersion>
+	<hazelcastVersion>3.2.5</hazelcastVersion>
+	<camelVersion>2.13.2</camelVersion>
+	<swaggerVersion>1.3.0</swaggerVersion>
     </properties>
 
     <repositories>
@@ -27,42 +31,42 @@
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-core</artifactId>
-            <version>${project.version}</version>
+            <version>${dropwizardVersion}</version>
         </dependency>
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-auth</artifactId>
-            <version>${project.version}</version>
+            <version>${dropwizardVersion}</version>
         </dependency>
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-assets</artifactId>
-            <version>${project.version}</version>
+            <version>${dropwizardVersion}</version>
         </dependency>
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-spdy</artifactId>
-            <version>${project.version}</version>
+            <version>${dropwizardVersion}</version>
         </dependency>
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-hibernate</artifactId>
-            <version>${project.version}</version>
+            <version>${dropwizardVersion}</version>
         </dependency>
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-migrations</artifactId>
-            <version>${project.version}</version>
+            <version>${dropwizardVersion}</version>
         </dependency>
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-views-freemarker</artifactId>
-            <version>${project.version}</version>
+            <version>${dropwizardVersion}</version>
         </dependency>
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-views-mustache</artifactId>
-            <version>${project.version}</version>
+            <version>${dropwizardVersion}</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -72,7 +76,7 @@
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-testing</artifactId>
-            <version>${project.version}</version>
+            <version>${dropwizardVersion}</version>
             <scope>test</scope>
         </dependency>
 	<dependency>
@@ -86,9 +90,14 @@
 		<version>1.9</version>
 	</dependency>
 	<dependency>
-		<groupId>com.hazelcast</groupId>
-		<artifactId>hazelcast</artifactId>
-		<version>3.2.5</version>
+	    <groupId>com.hazelcast</groupId>
+	    <artifactId>hazelcast</artifactId>
+            <version>${hazelcastVersion}</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.wordnik</groupId>
+	    <artifactId>swagger-jaxrs_2.10</artifactId>
+            <version>${swaggerVersion}</version>
 	</dependency>
     </dependencies>
 
