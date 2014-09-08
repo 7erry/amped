@@ -106,35 +106,22 @@ https://github.com/dropwizard/metrics
 Requirements
 ============
 * mvn 3.x
-<br/>
-  $ mvn -version
-<br/>
+  mvn -version
   Apache Maven 3.2.2 (45f7c06d68e745d05611f7fd14efb6594181933e; 2014-06-17T09:51:42-04:00)
-<br/>
   Maven home: /Users/twalters/Documents/tools/apache-maven-3.2.2
   Java version: 1.8.0_11, vendor: Oracle Corporation
-<br/>
   Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home/jre
-<br/>
   Default locale: en_US, platform encoding: UTF-8
-<br/>
   OS name: "mac os x", version: "10.9.3", arch: "x86_64", family: "mac"
 
 * java 8
-<br/>
-  $ java -version
-<br/>
+  java -version
   java version "1.8.0_11"
-<br/>
   Java(TM) SE Runtime Environment (build 1.8.0_11-b12)
-<br/>
   Java HotSpot(TM) 64-Bit Server VM (build 25.11-b03, mixed mode)
-<br/>
 
 * JAVA_HOME set
-<br/>
-  $ echo $JAVA_HOME
-<br/>
+  echo $JAVA_HOME
   /Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home
 
 <br/>
