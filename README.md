@@ -105,7 +105,7 @@ https://github.com/dropwizard/metrics
 
 Requirements
 ============
-*mvn 3.x
+* mvn 3.x
 <br/>
   $ mvn -version
 <br/>
@@ -120,7 +120,7 @@ Requirements
 <br/>
   OS name: "mac os x", version: "10.9.3", arch: "x86_64", family: "mac"
 
-*java 8
+* java 8
 <br/>
   $ java -version
 <br/>
@@ -131,7 +131,7 @@ Requirements
   Java HotSpot(TM) 64-Bit Server VM (build 25.11-b03, mixed mode)
 <br/>
 
-*JAVA_HOME set
+* JAVA_HOME set
 <br/>
   $ echo $JAVA_HOME
 <br/>
