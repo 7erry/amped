@@ -7,10 +7,15 @@ https://slides.com/twalters/amped
 The following project layout is typical of many distributed applications: 
 
 Amped-facade
----------
+============
 * Customer-facing REST-based edge service
 * Uses DropWizard
 * Uses Hazelcast
 * Optionally uses Camel 
 
-
+Quick Start
+===========
+*  git clone https://github.com/7erry/amped.git
+*  cd uifacade
+*  mvn package
+*  java -jar target/amped-helloworld-0.7.1.jar server amped.yml 
