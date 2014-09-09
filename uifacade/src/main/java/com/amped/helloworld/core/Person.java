@@ -2,6 +2,9 @@ package com.amped.helloworld.core;
 
 import javax.persistence.*;
 
+import com.wordnik.swagger.annotations.*;
+
+@ApiModel(value = "A human being regarded as an individual")
 @Entity
 @Table(name = "people")
 @NamedQueries({
@@ -25,10 +28,12 @@ public class Person {
         return id;
     }
 
+    @ApiModelProperty(value = "Person ID", required=true)
     public void setId(long id) {
         this.id = id;
     }
 
+    @ApiModelProperty(value = "Person Full Name", required=true)
     public String getFullName() {
         return fullName;
     }
@@ -36,7 +41,8 @@ public class Person {
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
-
+    
+    @ApiModelProperty(value = "Person Job Title", required=true, allowableValues = "Worker, Manager, Destroyer")
     public String getJobTitle() {
         return jobTitle;
     }

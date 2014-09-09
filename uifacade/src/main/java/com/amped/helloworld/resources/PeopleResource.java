@@ -11,8 +11,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
+import com.wordnik.swagger.annotations.*;
+
 @Path("/people")
-@Produces(MediaType.APPLICATION_JSON)
+@Api(value = "/people", description = "Operations about people")
+@Produces({"application/json"})
 public class PeopleResource {
 
     private final PersonDAO peopleDAO;
@@ -22,12 +25,23 @@ public class PeopleResource {
     }
 
     @POST
+    @Path("/{personId}")
+    @ApiOperation(value = "Add a person by ID", notes = "More notes about this method", response = Person.class)
+    @ApiResponses(value = {
+        @ApiResponse(code = 400, message = "Invalid ID supplied"),
+        @ApiResponse(code = 404, message = "Person not found")
+    })
+
     @UnitOfWork
     public Person createPerson(Person person) {
         return peopleDAO.create(person);
     }
 
     @GET
+    @ApiOperation(value = "List all people", notes = "More notes about this method", response = Person.class)
+    @ApiResponses(value = {
+        @ApiResponse(code = 404, message = "People not found")
+    })
     @UnitOfWork
     public List<Person> listPeople() {
         return peopleDAO.findAll();

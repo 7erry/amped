@@ -14,7 +14,10 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/people/{personId}")
+import com.wordnik.swagger.annotations.*;
+
+@Path("/person")
+@Api(value = "/person", description = "Operations about a person")
 @Produces(MediaType.APPLICATION_JSON)
 public class PersonResource {
 
@@ -25,8 +28,15 @@ public class PersonResource {
     }
 
     @GET
+    @Path("/{personId}")
+    @ApiOperation(value = "Find person by ID", notes = "More notes about this method", response = Person.class)
+    @ApiResponses(value = {
+	@ApiResponse(code = 400, message = "Invalid ID supplied"),
+	@ApiResponse(code = 404, message = "Person not found") 
+    })
+
     @UnitOfWork
-    public Person getPerson(@PathParam("personId") LongParam personId) {
+    public Person getPerson(@ApiParam(value = "ID of the person to return", required = true) @PathParam("personId") LongParam personId) {
         return findSafely(personId.get());
     }
 
@@ -40,6 +50,7 @@ public class PersonResource {
 
     @GET
     @Path("/view_freemarker")
+    @ApiOperation(value = "Freemarker view of person", notes = "More notes about this method", response = Person.class)
     @UnitOfWork
     @Produces(MediaType.TEXT_HTML)
     public PersonView getPersonViewFreemarker(@PathParam("personId") LongParam personId) {
@@ -48,6 +59,7 @@ public class PersonResource {
     
     @GET
     @Path("/view_mustache")
+    @ApiOperation(value = "Mustache view of person", notes = "More notes about this method", response = Person.class)
     @UnitOfWork
     @Produces(MediaType.TEXT_HTML)
     public PersonView getPersonViewMustache(@PathParam("personId") LongParam personId) {
