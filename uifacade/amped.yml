@@ -18,16 +18,27 @@ database:
   url: jdbc:h2:./target/amped
 
 server:
-  type: simple
-  applicationContextPath: /amped
-  adminContextPath: /admin
-  connector:
-    type: http
-    port: 8080
+  adminMinThreads: 1
+  adminMaxThreads: 64
+  applicationConnectors:
+    - type: http
+      port: 8080
+    - type: https
+      port: 8443
+      keyStorePath: amped.keystore
+      keyStorePassword: example
+      validateCerts: false
+  adminConnectors:
+    - type: http
+      port: 8081
+    - type: https
+      port: 8444
+      keyStorePath: amped.keystore
+      keyStorePassword: example
+      validateCerts: false
 
 # Logging settings.
 logging:
-
   # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
   level: INFO
 
