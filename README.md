@@ -79,8 +79,9 @@ Project Overview
 * Cloud friendly
 
 The following project layout is typical of many distributed applications such as Dropwizard: 
-uifacade/src/
-└── main
+
+  uifacade/src/
+  └── main
     ├── java
     │   └── com
     │       └── amped
