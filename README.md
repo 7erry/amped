@@ -78,7 +78,45 @@ Project Overview
 * Fault tolerance
 * Cloud friendly
 
-The following project layout is typical of many distributed applications: 
+The following project layout is typical of many distributed applications such as Dropwizard: 
+uifacade/src/
+└── main
+    ├── java
+    │   └── com
+    │       └── amped
+    │           ├── helloworld
+    │           │   ├── auth
+    │           │   ├── cli
+    │           │   ├── core
+    │           │   ├── db
+    │           │   ├── filter
+    │           │   ├── health
+    │           │   ├── resources
+    │           │   ├── routes
+    │           │   └── views
+    │           └── mapstore
+    └── resources
+        ├── assets
+        │   ├── css
+        │   ├── example.txt
+        │   ├── images
+        │   ├── index.html
+        │   ├── lib
+        │   ├── o2c.html
+        │   ├── swagger-ui.js
+        │   └── swagger-ui.min.js
+        ├── banner.txt
+        ├── com
+        │   └── amped
+        │       └── helloworld
+        │           └── views
+        │               ├── freemarker
+        │               └── mustache
+        ├── migrations.xml
+        └── views
+            ├── ftl
+            └── mustache
+
 
 Amped-facade
 ---------
@@ -149,13 +187,13 @@ Ubuntu:	14.04.1
 
 Execution
 =========
-* To package the helloworld run.
+* To package the amped-helloworld application run.
 
         mvn package
 
 * To setup the h2 database run.
 
-        java -jar target/amped-helloworld-0.7.1-SNAPSHOT.jar db migrate example.yml
+        java -jar target/amped-helloworld-0.7.1.jar db migrate amped.yml  
 
 * To run the server run.
 
