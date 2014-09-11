@@ -44,6 +44,13 @@ Architecture Overview
 
 Real-time Metrics
 =================================
+
+Investigating: https://github.com/yammer/tenacity
+  * Stop cascading failures.
+  * Fail-fast and rapidly recover.
+  * Reduce mean-time-to-discovery (with dashboards)
+  *Reduce mean-time-to-recovery (with dynamic configuration)
+
 Metrics Dropwizard Dashboard
 -----------------
 <img src="https://raw.github.com/7erry/amped/master/docs/images/amped-hystrix-dashboard.jpg">
