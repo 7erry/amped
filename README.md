@@ -80,44 +80,44 @@ Project Overview
 
 The following project layout is typical of many distributed applications such as Dropwizard: 
 
-  uifacade/src/
-  └── main
-    ├── java
-    │   └── com
-    │       └── amped
-    │           ├── helloworld
-    │           │   ├── auth
-    │           │   ├── cli
-    │           │   ├── core
-    │           │   ├── db
-    │           │   ├── filter
-    │           │   ├── health
-    │           │   ├── resources
-    │           │   ├── routes
-    │           │   └── views
-    │           └── mapstore
-    └── resources
-        ├── assets
-        │   ├── css
-        │   ├── example.txt
-        │   ├── images
-        │   ├── index.html
-        │   ├── lib
-        │   ├── o2c.html
-        │   ├── swagger-ui.js
-        │   └── swagger-ui.min.js
-        ├── banner.txt
-        ├── com
-        │   └── amped
-        │       └── helloworld
-        │           └── views
-        │               ├── freemarker
-        │               └── mustache
-        ├── migrations.xml
-        └── views
-            ├── ftl
-            └── mustache
-
+<br/>  uifacade/src/
+<br/>  └── main
+<br/>    ├── java
+<br/>    │   └── com
+<br/>    │       └── amped
+<br/>    │           ├── helloworld
+<br/>    │           │   ├── auth
+<br/>    │           │   ├── cli
+<br/>    │           │   ├── core
+<br/>    │           │   ├── db
+<br/>    │           │   ├── filter
+<br/>    │           │   ├── health
+<br/>    │           │   ├── resources
+<br/>    │           │   ├── routes
+<br/>    │           │   └── views
+<br/>    │           └── mapstore
+<br/>    └── resources
+<br/>        ├── assets
+<br/>        │   ├── css
+<br/>        │   ├── example.txt
+<br/>        │   ├── images
+<br/>        │   ├── index.html
+<br/>        │   ├── lib
+<br/>        │   ├── o2c.html
+<br/>        │   ├── swagger-ui.js
+<br/>        │   └── swagger-ui.min.js
+<br/>        ├── banner.txt
+<br/>        ├── com
+<br/>        │   └── amped
+<br/>        │       └── helloworld
+<br/>        │           └── views
+<br/>        │               ├── freemarker
+<br/>        │               └── mustache
+<br/>        ├── migrations.xml
+<br/>        └── views
+<br/>            ├── ftl
+<br/>            └── mustache
+<br/>
 
 Amped-facade
 ---------
