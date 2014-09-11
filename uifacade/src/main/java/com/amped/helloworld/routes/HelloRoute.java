@@ -8,8 +8,11 @@ public class HelloRoute extends RouteBuilder{
 
 	@Override
 	public void configure() throws Exception {
-		
-		from("direct:start").delay(Duration.seconds(5).toMilliseconds()).asyncDelayed().to("log:hello");
+		// sample camel route using http://camel.apache.org/delayer.html
+		from("direct:start")
+			.delay(Duration.seconds(5).toMilliseconds())
+			.asyncDelayed()
+			.to("log:hello");
 		
 	}
 

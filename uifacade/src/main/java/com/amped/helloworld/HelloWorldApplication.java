@@ -87,7 +87,6 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         environment.jersey().register(new BasicAuthProvider<>(new ExampleAuthenticator(),
                                                         "SUPER SECRET STUFF"));
 
-        environment.jersey().register(new HelloWorldResource(template));
         environment.jersey().register(new ViewResource());
         environment.jersey().register(new ProtectedResource());
         environment.jersey().register(new PeopleResource(dao));
@@ -98,7 +97,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 	try{
           ManagedCamel camel = new ManagedCamel(new HelloRoute());
           environment.lifecycle().manage(camel);
-          //environment.jersey().register(new SampleResource(camel.createProducer()));
+          environment.jersey().register(new HelloWorldResource(template, camel.createProducer()));
 	}catch(Exception ex){
 	  ;
 	}

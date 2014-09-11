@@ -14,6 +14,8 @@ import javax.ws.rs.core.MediaType;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.apache.camel.ProducerTemplate;
+
 @Path("/hello-world")
 @Produces(MediaType.APPLICATION_JSON)
 public class HelloWorldResource {
@@ -22,16 +24,25 @@ public class HelloWorldResource {
     private final Template template;
     private final AtomicLong counter;
 
-    public HelloWorldResource(Template template) {
+    private ProducerTemplate producer;
+
+    public HelloWorldResource(Template template, ProducerTemplate producer) {
         this.template = template;
         this.counter = new AtomicLong();
+	this.producer = producer;
     }
 
     @GET
     @Timed(name = "get-requests")
     @CacheControl(maxAge = 1, maxAgeUnit = TimeUnit.DAYS)
     public Saying sayHello(@QueryParam("name") Optional<String> name) {
-        return new Saying(counter.incrementAndGet(), template.render(name));
+	String message = template.render(name);
+
+	// hello camel example
+	producer.asyncSendBody("direct:start", message);
+
+	// DropWizard example
+        return new Saying(counter.incrementAndGet(), message);
     }
 
     @POST
