@@ -79,6 +79,8 @@ Project Overview
 * Cloud friendly
 
 The following project layout is typical of many distributed applications such as Dropwizard: 
+  * Many of these are optional based on Service implementation needs
+
 <br/>
 <img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/tree.png">
 
