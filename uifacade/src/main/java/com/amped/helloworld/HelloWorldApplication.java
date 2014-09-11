@@ -18,7 +18,9 @@ import io.dropwizard.migrations.MigrationsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
+import io.dropwizard.lifecycle.Managed;
 
+// swagger
 import com.wordnik.swagger.jaxrs.config.*;
 import com.wordnik.swagger.jaxrs.listing.ApiListingResourceJSON;
 import com.wordnik.swagger.jaxrs.listing.ApiDeclarationProvider;
@@ -26,6 +28,9 @@ import com.wordnik.swagger.jaxrs.listing.ResourceListingProvider;
 import com.wordnik.swagger.config.*;
 import com.wordnik.swagger.reader.*;
 import com.wordnik.swagger.jaxrs.reader.DefaultJaxrsApiReader;
+
+// camel
+import com.amped.helloworld.routes.HelloRoute;
 
 public class HelloWorldApplication extends Application<HelloWorldConfiguration> {
     public static void main(String[] args) throws Exception {
@@ -89,6 +94,16 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         environment.jersey().register(new PersonResource(dao));
         environment.jersey().register(new FilteredResource());
 
+	// Integrate Camel
+	try{
+          ManagedCamel camel = new ManagedCamel(new HelloRoute());
+          environment.lifecycle().manage(camel);
+          //environment.jersey().register(new SampleResource(camel.createProducer()));
+	}catch(Exception ex){
+	  ;
+	}
+
+	// Integrate Swagger
 	configureSwagger(environment);
     }
 

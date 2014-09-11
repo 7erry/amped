@@ -99,6 +99,11 @@
 	    <artifactId>swagger-jaxrs_2.10</artifactId>
             <version>${swaggerVersion}</version>
 	</dependency>
+	<dependency>
+	    <groupId>org.apache.camel</groupId>
+	    <artifactId>camel-core</artifactId>
+            <version>${camelVersion}</version>
+	</dependency>
     </dependencies>
 
     <build>
