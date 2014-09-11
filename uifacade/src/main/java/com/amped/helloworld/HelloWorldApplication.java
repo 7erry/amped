@@ -56,9 +56,6 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 
         // use assets as root
 	bootstrap.addBundle(new AssetsBundle("/assets","/ui"));
-	//bootstrap.addBundle(new AssetsBundle("/assets/css", "/css", null, "css"));
-	//bootstrap.addBundle(new AssetsBundle("/assets/js", "/js", null, "js"));
-	//bootstrap.addBundle(new AssetsBundle("/assets/fonts", "/fonts", null, "fonts"));
 
 	// our helloworld api's
         bootstrap.addBundle(new MigrationsBundle<HelloWorldConfiguration>() {
@@ -81,28 +78,35 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         final PersonDAO dao = new PersonDAO(hibernateBundle.getSessionFactory());
         final Template template = configuration.buildTemplate();
 
+	// health check
         environment.healthChecks().register("template", new TemplateHealthCheck(template));
-        environment.jersey().getResourceConfig().getResourceFilterFactories().add(new DateNotSpecifiedFilterFactory());
-
-        environment.jersey().register(new BasicAuthProvider<>(new ExampleAuthenticator(),
-                                                        "SUPER SECRET STUFF"));
-
-        environment.jersey().register(new ViewResource());
+        
+	// protected resource
+	environment.jersey().register(new BasicAuthProvider<>(new ExampleAuthenticator(), "SUPER SECRET STUFF"));
         environment.jersey().register(new ProtectedResource());
-        environment.jersey().register(new PeopleResource(dao));
-        environment.jersey().register(new PersonResource(dao));
+
+	// Filtered Resource
+	environment.jersey().getResourceConfig().getResourceFilterFactories().add(new DateNotSpecifiedFilterFactory());
         environment.jersey().register(new FilteredResource());
 
-	// Integrate Camel
+	// view's
+        environment.jersey().register(new ViewResource());
+        
+
+	// Rest API's
+	environment.jersey().register(new PeopleResource(dao));
+        environment.jersey().register(new PersonResource(dao));
+
+	// Camel
 	try{
           ManagedCamel camel = new ManagedCamel(new HelloRoute());
           environment.lifecycle().manage(camel);
           environment.jersey().register(new HelloWorldResource(template, camel.createProducer()));
 	}catch(Exception ex){
-	  ;
+	  System.out.println(ex);
 	}
 
-	// Integrate Swagger
+	// Swagger
 	configureSwagger(environment);
     }
 
@@ -119,13 +123,5 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         swaggerConfig.setApiVersion(API_VERSION); 
         swaggerConfig.setBasePath("http://local.amplify.com:8080"); 
 
-        /* Allow CORS for Swagger */ 
-        //FilterRegistration.Dynamic filter = environment.servlets().addFilter("CORS", CrossOriginFilter.class); 
-        //filter.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*"); 
-        //filter.setInitParameter("allowedOrigins", "*"); 
-        //filter.setInitParameter("allowedHeaders", "Content-Type,Authorization,X-Requested-With,Content-Length,Accept,Origin"); 
-        //filter.setInitParameter("allowedMethods", "GET,PUT,POST,DELETE,OPTIONS"); 
-        //filter.setInitParameter("preflightMaxAge", "5184000"); // 2 months 
-        //filter.setInitParameter("allowCredentials", "true"); 
     }
 }
