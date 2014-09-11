@@ -1,7 +1,7 @@
 <h1>Amped</h1>
 https://slides.com/twalters/amped
 
-<img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/amped-logo.jpg" height="320" width="320"/>
+<img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/amped-logo.jpg" height="240" width="240"/>
 
  
 Overview
@@ -35,7 +35,7 @@ Amped is a Java-based, cloud-native, reference architecture using many Open Sour
 
 Architecture Overview
 =====================
-<img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/architecture.png">
+<img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/architecture.png"/>
 <br/>
   * High Performance
   * High Availability
@@ -53,7 +53,7 @@ Investigating: https://github.com/yammer/tenacity
 
 Metrics Dropwizard Dashboard
 -----------------
-<img src="https://raw.github.com/7erry/amped/master/docs/images/amped-hystrix-dashboard.jpg">
+<img src="https://raw.github.com/7erry/amped/master/docs/images/amped-hystrix-dashboard.jpg"/>
 <br/>
 https://github.com/kimble/dropwizard-dashboard
 
@@ -61,13 +61,13 @@ Historical Metrics
 =================================
 Graphite Dashboard
 ------------------
-<img src="https://raw.github.com/7erry/amped/master/docs/images/amped-graphite-dashboard.jpg">
+<img src="https://raw.github.com/7erry/amped/master/docs/images/amped-graphite-dashboard.jpg"/>
 <br/>
 http://graphite.wikidot.com/
 
 CloudWatch Dashboard
 --------------------
-<img src="https://raw.github.com/7erry/amped/master/docs/images/amped-cloudwatch-dashboard.jpg">
+<img src="https://raw.github.com/7erry/amped/master/docs/images/amped-cloudwatch-dashboard.jpg"/>
 <br/>
 http://aws.amazon.com/cloudwatch/"
 
@@ -79,8 +79,8 @@ Project Overview
 * Cloud friendly
 
 The following project layout is typical of many distributed applications such as Dropwizard: 
-<img src="https://raw.github.com/7erry/amped/master/docs/images/tree.png">
-
+<br/>
+<img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/tree.png">
 
 Amped-facade
 ---------
