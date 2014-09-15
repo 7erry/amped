@@ -22,8 +22,8 @@ Quick Start
 
 FAQ
 ==========
-Default Hazelcast discovery is using multicast so be sure to use a wired connection instead of wireless
-Default Swagger UI is located at http://localhost:8080/ui/index.html
-Default password for the amped.keystore is example
-Application version of 0.7.1 actually indicates the Dropwizard version it is based on
+* Default Hazelcast discovery is using multicast so be sure to use a wired connection instead of wireless
+* Default Swagger UI is located at http://localhost:8080/ui/index.html
+* Default password for the amped.keystore is example
+* Application version of 0.7.1 actually indicates the Dropwizard version it is based on
 
