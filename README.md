@@ -115,6 +115,7 @@ http://www.slideshare.net/tomaslin/dropwizard-and-groovy
 <br/>
 https://github.com/dropwizard/metrics
 <br/>
+https://github.com/wordnik/swagger-core/wiki/JavaDropwizard-Quickstart
 
 Requirements
 ============

@@ -31,13 +31,13 @@ public class PeopleResource {
         @ApiResponse(code = 400, message = "Invalid ID supplied"),
         @ApiResponse(code = 404, message = "Person not found")
     })
-
     @UnitOfWork
     public Person createPerson(Person person) {
         return peopleDAO.create(person);
     }
 
     @GET
+    @Path("/")
     @ApiOperation(value = "List all people", notes = "More notes about this method", response = Person.class)
     @ApiResponses(value = {
         @ApiResponse(code = 404, message = "People not found")

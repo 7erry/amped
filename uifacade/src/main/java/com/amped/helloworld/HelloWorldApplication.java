@@ -39,6 +39,8 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 
     final static Logger logger = LoggerFactory.getLogger(HelloWorldApplication.class);
 
+    ManagedHazelcast hazelcast = null;
+
     public static void main(String[] args) throws Exception {
         new HelloWorldApplication().run(args);
     }
@@ -79,8 +81,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
     }
 
     @Override
-    public void run(HelloWorldConfiguration configuration,
-                    Environment environment) throws ClassNotFoundException {
+    public void run(HelloWorldConfiguration configuration, Environment environment) throws ClassNotFoundException {
         final PersonDAO dao = new PersonDAO(hibernateBundle.getSessionFactory());
         final Template template = configuration.buildTemplate();
 
@@ -98,15 +99,15 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         // view's
         environment.jersey().register(new ViewResource());
 
-        // Rest API's
-        environment.jersey().register(new PeopleResource(dao));
-        environment.jersey().register(new PersonResource(dao));
+        // Hazelcast
+        configureHazelcast(configuration, environment);
 
         // Camel
         configureCamel(environment, template);
 
-        // Hazelcast
-        configureHazelcast(configuration, environment, template);
+        // Rest API's
+        environment.jersey().register(new PeopleResource(dao));
+        environment.jersey().register(new PersonResource(dao));
 
         // Swagger
         configureSwagger(environment);
@@ -116,7 +117,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         try {
             ManagedCamel camel = new ManagedCamel(new HelloRoute());
             environment.lifecycle().manage(camel);
-            environment.jersey().register(new HelloWorldResource(template, camel.createProducer()));
+            environment.jersey().register(new HelloWorldResource(template, camel.createProducer(),hazelcast));
         } catch (Exception ex) {
             logger.error(ex.getCause().getMessage());
         }
@@ -136,14 +137,14 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         String basePath = "http://localhost:8080";
         swaggerConfig.setBasePath(basePath);
 
-        logger.info(environment.getApplicationContext().getContextPath());
+        logger.info("Context Path:\t"+environment.getApplicationContext().getContextPath());
 
         logger.info("Swagger UI:\t" + basePath + "\n");
     }
 
-    void configureHazelcast(HelloWorldConfiguration configuration, Environment environment, Template template) {
+    void configureHazelcast(HelloWorldConfiguration configuration, Environment environment) {
         try {
-            ManagedHazelcast hazelcast = new ManagedHazelcast(configuration);
+            hazelcast = new ManagedHazelcast(configuration);
             environment.lifecycle().manage(hazelcast);
         } catch (Exception ex) {
             logger.error(ex.getCause().getMessage());

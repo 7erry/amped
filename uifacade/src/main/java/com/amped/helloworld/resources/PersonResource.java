@@ -31,8 +31,8 @@ public class PersonResource {
     @Path("/{personId}")
     @ApiOperation(value = "Find person by ID", notes = "More notes about this method", response = Person.class)
     @ApiResponses(value = {
-	@ApiResponse(code = 400, message = "Invalid ID supplied"),
-	@ApiResponse(code = 404, message = "Person not found") 
+            @ApiResponse(code = 400, message = "Invalid ID supplied"),
+            @ApiResponse(code = 404, message = "Person not found")
     })
 
     @UnitOfWork
