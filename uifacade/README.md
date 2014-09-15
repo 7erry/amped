@@ -11,7 +11,7 @@ Amped-facade
 * Customer-facing REST-based edge service
 * Uses DropWizard
 * Uses Hazelcast
-* Uses Camel - see resources/HelloWorldService and routes/HelloCamel
+* Uses Camel - see resources/HelloWorldService and routes/HelloRoute
 
 Quick Start
 ===========
