@@ -176,4 +176,6 @@ Execution
 	
 	open http://localhost:8080/people
 
+* To view the API catalog.
+	http://localhost:8080/ui/index.html
 
