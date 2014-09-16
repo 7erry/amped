@@ -25,5 +25,7 @@ FAQ
 * Default Hazelcast discovery is using multicast so be sure to use a wired connection instead of wireless
 * Default Swagger UI is located at http://localhost:8080/ui/index.html
 * Default password for the amped.keystore is example
-* Application version of 0.7.1 actually indicates the Dropwizard version it is based on
+* Application version of 0.7.1 actually indicates the Dropwizard version it is based on (See pom.xml)
+* Managed Objects are used to incorporate server technologies such as Hazelcast and Camel. More information: https://dropwizard.github.io/dropwizard/manual/core.html#man-core-managed
+
 
