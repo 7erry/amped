@@ -1,5 +1,5 @@
 <h1>Amped - UIFacade</h1>
-https://slides.com/twalters/amped
+[Amped Slides](https://slides.com/twalters/amped)
 
 <img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/amped-logo.jpg" height="320" width="320"/>
 
@@ -26,6 +26,9 @@ FAQ
 * Default Swagger UI is located at http://localhost:8080/ui/index.html
 * Default password for the amped.keystore is example
 * Application version of 0.7.1 actually indicates the Dropwizard version it is based on (See pom.xml)
-* Managed Objects are used to incorporate server technologies such as Hazelcast and Camel. More information: https://dropwizard.github.io/dropwizard/manual/core.html#man-core-managed
+* Managed Objects are used to incorporate server technologies such as Hazelcast and Camel.
+<br/> More information: https://dropwizard.github.io/dropwizard/manual/core.html#man-core-managed
 
-
+Gatling Report for hello-world (local instance on a MacBookPro 2G i7):
+<br/>
+<img src="https://gitorious.poc.currdc.net/architecture/amped/raw/192d946efd1e6ca3b634ef73a4dddac21befc254:master/docs/images/1000Users.png"/>

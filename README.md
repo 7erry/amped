@@ -1,5 +1,5 @@
 <h1>Amped</h1>
-https://slides.com/twalters/amped
+[Amped Presentation](https://slides.com/twalters/amped)
 
 <img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/amped-logo.jpg" height="240" width="240"/>
 
@@ -45,7 +45,8 @@ Architecture Overview
 Real-time Metrics
 =================================
 
-Investigating: https://github.com/yammer/tenacity
+[Investigating](https://github.com/yammer/tenacity)
+  * Uses Netflix Hystrix
   * Stop cascading failures.
   * Fail-fast and rapidly recover.
   * Reduce mean-time-to-discovery (with dashboards)
@@ -53,23 +54,17 @@ Investigating: https://github.com/yammer/tenacity
 
 Metrics Dropwizard Dashboard
 -----------------
-<img src="https://raw.github.com/7erry/amped/master/docs/images/amped-hystrix-dashboard.jpg"/>
-<br/>
-https://github.com/kimble/dropwizard-dashboard
+[Dropwizard Dashboard](https://github.com/kimble/dropwizard-dashboard)
 
 Historical Metrics
 =================================
 Graphite Dashboard
 ------------------
-<img src="https://raw.github.com/7erry/amped/master/docs/images/amped-graphite-dashboard.jpg"/>
-<br/>
-http://graphite.wikidot.com/
+[Graphite](http://graphite.wikidot.com/)
 
 CloudWatch Dashboard
 --------------------
-<img src="https://raw.github.com/7erry/amped/master/docs/images/amped-cloudwatch-dashboard.jpg"/>
-<br/>
-http://aws.amazon.com/cloudwatch/"
+[CloudWatch](http://aws.amazon.com/cloudwatch/)
 
 Project Overview
 ================
