@@ -22,6 +22,10 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
 import io.dropwizard.lifecycle.Managed;
+import io.dropwizard.server.DefaultServerFactory;
+import io.dropwizard.jetty.HttpConnectorFactory;
+
+import java.util.ArrayList;
 
 // swagger
 import com.wordnik.swagger.jaxrs.config.*;
@@ -82,8 +86,12 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 
     @Override
     public void run(HelloWorldConfiguration configuration, Environment environment) throws ClassNotFoundException {
-        final PersonDAO dao = new PersonDAO(hibernateBundle.getSessionFactory());
-        final Template template = configuration.buildTemplate();
+  
+	// Hibernate DAO
+	final PersonDAO dao = new PersonDAO(hibernateBundle.getSessionFactory());
+        
+	// hello-world configuration template
+	final Template template = configuration.buildTemplate();
 
         // health check template
         environment.healthChecks().register("template", new TemplateHealthCheck(template));
@@ -110,7 +118,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         environment.jersey().register(new PersonResource(dao));
 
         // Swagger
-        configureSwagger(environment);
+        configureSwagger(configuration, environment);
     }
 
     void configureCamel(Environment environment, Template template) {
@@ -123,7 +131,19 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         }
     }
 
-    void configureSwagger(Environment environment) {
+    void configureSwagger(HelloWorldConfiguration configuration,Environment environment) {
+	// get the http host and port for swagger
+	DefaultServerFactory sf = (DefaultServerFactory)configuration.getServerFactory();
+	ArrayList<String> basePath = new ArrayList<String>();
+	// lambda example - here we are simply getting the address and port we are binding on for http
+	sf.getApplicationConnectors().forEach(n -> {
+	    if(n instanceof HttpConnectorFactory){
+		String host = ((HttpConnectorFactory)n).getBindHost()!=null ? ((HttpConnectorFactory)n).getBindHost() : "localhost";
+	    	basePath.add("http://"+host+":"+((HttpConnectorFactory)n).getPort());
+	    }
+	});
+        logger.info("Swagger UI:\t" + basePath.get(0).toString() + "/ui/index.html\n");
+
         String API_VERSION = "1.0.0";
         // swagger setup (http://swagger.wordnik.com/)
         environment.jersey().register(new ApiListingResourceJSON());
@@ -134,12 +154,8 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 
         SwaggerConfig swaggerConfig = ConfigFactory.config();
         swaggerConfig.setApiVersion(API_VERSION);
-        String basePath = "http://localhost:8080";
-        swaggerConfig.setBasePath(basePath);
+        swaggerConfig.setBasePath(basePath.toString()+"/ui");
 
-        logger.info("Context Path:\t"+environment.getApplicationContext().getContextPath());
-
-        logger.info("Swagger UI:\t" + basePath + "\n");
     }
 
     void configureHazelcast(HelloWorldConfiguration configuration, Environment environment) {

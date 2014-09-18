@@ -11,6 +11,7 @@
     <name>Amped Reference Application</name>
 
     <properties>
+	<javaVersion>1.8</javaVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	<dropwizardVersion>0.7.1</dropwizardVersion>
@@ -119,8 +120,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>${javaVersion}</source>
+                    <target>${javaVersion}</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
