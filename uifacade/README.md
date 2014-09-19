@@ -31,4 +31,4 @@ FAQ
 
 Gatling Report for hello-world (local instance on a MacBookPro 2G i7):
 <br/>
-<img src="https://gitorious.poc.currdc.net/architecture/amped/raw/192d946efd1e6ca3b634ef73a4dddac21befc254:master/docs/images/1000Users.png"/>
+<img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/1000Users.png"/>
