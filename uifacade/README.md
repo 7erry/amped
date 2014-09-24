@@ -32,3 +32,12 @@ FAQ
 Gatling Report for hello-world (local instance on a MacBookPro 2G i7):
 <br/>
 <img src="https://github.com/7erry/amped/blob/master/master/docs/images/1000Users.png"/>
+
+
+<br/>
+API Documentation and Execution
+<br/>
+<img src="https://github.com/7erry/amped/blob/master/master/docs/images/hw1.png"/>
+<img src="https://github.com/7erry/amped/blob/master/master/docs/images/hw2.png"/>
+<img src="https://github.com/7erry/amped/blob/master/master/docs/images/hw3.png"/>
+
