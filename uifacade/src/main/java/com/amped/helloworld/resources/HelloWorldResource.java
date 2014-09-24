@@ -52,7 +52,6 @@ public class HelloWorldResource {
 	
 	// Dropwizard Example yaml template 
 	String message = template.render(name != null ? Optional.of(name): Optional.absent());
-logger.info(message);
 
 	// Hazelcast Map & AtomicLong Examples
 	Map<Long,Saying> mapSayings = hazelcast.hzInstance.getMap("saying");
@@ -60,12 +59,16 @@ logger.info(message);
 	Saying saying = null;
 	if(id != null){
 	  saying = (Saying)mapSayings.get(id);
-	  saying.content = saying.content +" "+ name;	
+	  if(saying != null)
+	    saying.content = saying.content +" "+ name;	
 	}
 	if(saying == null)
 	  saying = new Saying(counter.incrementAndGet(),message);
 
-logger.info(saying.content);
+	// hello camel example
+ 	camelProducer.asyncSendBody("direct:helloworld", saying);
+
+	logger.info(saying.content);
 
 	// DropWizard example
 	return saying;
