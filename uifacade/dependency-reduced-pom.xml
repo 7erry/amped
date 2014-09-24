@@ -119,11 +119,11 @@
     </dependency>
   </dependencies>
   <properties>
-    <hazelcastVersion>3.2.5</hazelcastVersion>
+    <hazelcastVersion>3.3</hazelcastVersion>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <shiroVersion>1.2.3</shiroVersion>
     <dropwizardVersion>0.7.1</dropwizardVersion>
-    <camelVersion>2.13.2</camelVersion>
+    <camelVersion>2.12.3</camelVersion>
     <javaVersion>1.8</javaVersion>
     <swaggerVersion>1.3.8</swaggerVersion>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

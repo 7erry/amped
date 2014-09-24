@@ -15,8 +15,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	<dropwizardVersion>0.7.1</dropwizardVersion>
-	<hazelcastVersion>3.2.5</hazelcastVersion>
-	<camelVersion>2.13.2</camelVersion>
+	<hazelcastVersion>3.3</hazelcastVersion>
+	<camelVersion>2.12.3</camelVersion>
 	<shiroVersion>1.2.3</shiroVersion>
 	<swaggerVersion>1.3.8</swaggerVersion>
     </properties>
@@ -104,6 +104,11 @@
 	<dependency>
 	    <groupId>org.apache.camel</groupId>
 	    <artifactId>camel-core</artifactId>
+            <version>${camelVersion}</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.camel</groupId>
+	    <artifactId>camel-hazelcast</artifactId>
             <version>${camelVersion}</version>
 	</dependency>
 	<dependency>

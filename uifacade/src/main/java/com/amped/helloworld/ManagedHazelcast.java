@@ -7,8 +7,8 @@ import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.config.XmlConfigBuilder;
 import com.hazelcast.config.Config;
-import com.hazelcast.config.NetworkConfig;
-import com.hazelcast.config.JoinConfig;
+//import com.hazelcast.config.NetworkConfig;
+//import com.hazelcast.config.JoinConfig;
 
 import io.dropwizard.lifecycle.Managed;
 
@@ -45,8 +45,10 @@ public class ManagedHazelcast implements Managed {
 	}
 
 	public void start() throws Exception {
+	    logger.info("Starting Hazelcast");
             hzInstance = Hazelcast.newHazelcastInstance(cfg);
-	    logger.info("Members: "+hzInstance.getCluster().getMembers().size());
+	    while(! hzInstance.getLifecycleService().isRunning() ){ Thread.sleep(150); }
+	    logger.info("Hazelcast Started A Cluster of: "+hzInstance.getCluster().getMembers().size());
 	}
 
 	public void stop() throws Exception {

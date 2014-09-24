@@ -139,7 +139,8 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 	sf.getApplicationConnectors().forEach(n -> {
 	    if(n instanceof HttpConnectorFactory){
 		String host = ((HttpConnectorFactory)n).getBindHost()!=null ? ((HttpConnectorFactory)n).getBindHost() : "localhost";
-	    	basePath.add("http://"+host+":"+((HttpConnectorFactory)n).getPort());
+	    	//basePath.add("http://"+host+":"+((HttpConnectorFactory)n).getPort());
+	    	basePath.add("http://localhost:"+((HttpConnectorFactory)n).getPort());
 	    }
 	});
         logger.info("Swagger UI:\t" + basePath.get(0).toString() + "/ui/index.html\n");
@@ -154,7 +155,8 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 
         SwaggerConfig swaggerConfig = ConfigFactory.config();
         swaggerConfig.setApiVersion(API_VERSION);
-        swaggerConfig.setBasePath(basePath.toString()+"/ui");
+        //swaggerConfig.setBasePath(basePath.toString()+"/ui");
+        swaggerConfig.setBasePath("/");
 
     }
 
