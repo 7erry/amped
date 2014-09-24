@@ -40,4 +40,5 @@ API Documentation and Execution
 <img src="https://github.com/7erry/amped/blob/master/master/docs/images/hw1.png"/>
 <img src="https://github.com/7erry/amped/blob/master/master/docs/images/hw2.png"/>
 <img src="https://github.com/7erry/amped/blob/master/master/docs/images/hw3.png"/>
+<img src="https://github.com/7erry/amped/blob/master/master/docs/images/hw4.png"/>
 
