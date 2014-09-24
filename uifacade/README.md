@@ -35,10 +35,13 @@ Gatling Report for hello-world (local instance on a MacBookPro 2G i7):
 
 
 <br/>
-API Documentation and Execution
+API Documentation and Execution: http://localhost:8080/ui/index.html
 <br/>
 <img src="https://github.com/7erry/amped/blob/master/master/docs/images/hw1.png"/>
+<br/>
 <img src="https://github.com/7erry/amped/blob/master/master/docs/images/hw2.png"/>
+<br/>
 <img src="https://github.com/7erry/amped/blob/master/master/docs/images/hw3.png"/>
+<br/>
 <img src="https://github.com/7erry/amped/blob/master/master/docs/images/hw4.png"/>
 
