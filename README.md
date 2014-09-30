@@ -72,6 +72,11 @@ Project Overview
 * Isolate services based depending on their security profiles (PII)
 * Fault tolerance
 * Cloud friendly
+* The Unix Philosophy (Camel friendly)
+  * Write programs that do one thing and do it well.
+  * Write programs to work together.
+  * Write programs that handle text streams, because that is a universal interface.
+  * With pipes, many programs could work together, and they could work together at a distance.
 
 The following project layout is typical of many distributed applications such as Dropwizard: 
   * Many of these are optional based on Service implementation needs
