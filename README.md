@@ -160,11 +160,11 @@ Execution
 
 * To setup the h2 database run.
 
-        java -jar target/amped-helloworld-0.7.1.jar db migrate amped.yml  
+        java -jar target/amped-helloworld-0.8.0-SNAPSHOT.jar db migrate amped.yml  
 
 * To run the server run.
 
-        java -jar target/amped-helloworld-0.7.1-SNAPSHOT.jar server example.yml
+        java -jar target/amped-helloworld-0.8.0-SNAPSHOT.jar server example.yml
 
 * To hit the Hello World example (hit refresh a few times).
 
