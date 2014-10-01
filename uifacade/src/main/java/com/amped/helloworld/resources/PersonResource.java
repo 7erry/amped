@@ -4,7 +4,7 @@ import com.amped.helloworld.core.Person;
 import com.amped.helloworld.db.PersonDAO;
 import com.amped.helloworld.views.PersonView;
 import com.google.common.base.Optional;
-import com.sun.jersey.api.NotFoundException;
+import javax.ws.rs.NotFoundException;
 import io.dropwizard.hibernate.UnitOfWork;
 import io.dropwizard.jersey.params.LongParam;
 

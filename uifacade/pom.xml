@@ -7,14 +7,14 @@
 
     <groupId>io.dropwizard</groupId>
     <artifactId>amped-helloworld</artifactId>
-    <version>0.7.1</version>
+    <version>0.8.0-SNAPSHOT</version>
     <name>Amped Reference Application</name>
 
     <properties>
 	<javaVersion>1.8</javaVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	<dropwizardVersion>0.7.1</dropwizardVersion>
+	<dropwizardVersion>0.8.0-SNAPSHOT</dropwizardVersion>
 	<hazelcastVersion>3.3</hazelcastVersion>
 	<camelVersion>2.12.3</camelVersion>
 	<shiroVersion>1.2.3</shiroVersion>

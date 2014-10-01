@@ -3,9 +3,10 @@ package com.amped.helloworld;
 import com.amped.helloworld.auth.ExampleAuthenticator;
 import com.amped.helloworld.cli.RenderCommand;
 import com.amped.helloworld.core.Person;
+import com.amped.helloworld.core.User;
 import com.amped.helloworld.core.Template;
 import com.amped.helloworld.db.PersonDAO;
-import com.amped.helloworld.filter.DateNotSpecifiedFilterFactory;
+//import com.amped.helloworld.filter.DateNotSpecifiedFilterFactory;
 import com.amped.helloworld.health.TemplateHealthCheck;
 import com.amped.helloworld.resources.*;
 
@@ -14,7 +15,8 @@ import org.slf4j.LoggerFactory;
 
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
-import io.dropwizard.auth.basic.BasicAuthProvider;
+import io.dropwizard.auth.AuthFactory;
+import io.dropwizard.auth.basic.BasicAuthFactory;
 import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.hibernate.HibernateBundle;
 import io.dropwizard.migrations.MigrationsBundle;
@@ -97,12 +99,15 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         environment.healthChecks().register("template", new TemplateHealthCheck(template));
 
         // protected resource
-        environment.jersey().register(new BasicAuthProvider<>(new ExampleAuthenticator(), "SUPER SECRET STUFF"));
+	environment.jersey().register(AuthFactory.binder(new BasicAuthFactory<>(new ExampleAuthenticator(),
+       							"SUPER SECRET STUFF",
+       							User.class)));
+
         environment.jersey().register(new ProtectedResource());
 
         // Filtered Resource
-        environment.jersey().getResourceConfig().getResourceFilterFactories().add(new DateNotSpecifiedFilterFactory());
-        environment.jersey().register(new FilteredResource());
+        //environment.jersey().getResourceConfig().getResourceFilterFactories().add(new DateNotSpecifiedFilterFactory());
+        //environment.jersey().register(new FilteredResource());
 
         // view's
         environment.jersey().register(new ViewResource());
