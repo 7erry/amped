@@ -18,7 +18,7 @@ Quick Start
 *  git clone https://github.com/7erry/amped.git
 *  cd uifacade
 *  mvn package
-*  java -jar target/amped-helloworld-0.7.1.jar server amped.yml 
+*  java -jar target/amped-helloworld-0.8.0-SNAPSHOT.jar server amped.yml 
 
 FAQ
 ==========
