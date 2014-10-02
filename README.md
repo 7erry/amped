@@ -30,6 +30,10 @@ Amped is a Java-based, cloud-native, reference architecture using many Open Sour
   * Good for decomposition / [Component](http://camel.apache.org/components.html) based (routes/components)
   * Service Orchestration
   * Cross-JVM communications
+* [Hysterix](http://http://christopher-batey.blogspot.com/2014/08/using-hystrix-with-dropwizard.html/) for fault tolerance
+  * Command Pattern
+  * Circuit Breaker
+  * Fallback & Degrade Abilities
 * [MongoDB](http://www.mongodb.org/) for persistin
   * Document Database
 
@@ -37,6 +41,10 @@ Architecture Overview
 =====================
 <img src="https://raw.githubusercontent.com/7erry/amped/master/master/docs/images/architecture.png"/>
 <br/>
+  * Cynical Software
+  * Architected for Change
+  * Problem based Solution
+  * Deterministic & Metric Driven
   * High Performance
   * High Availability
   * Easy Scalability
