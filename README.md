@@ -30,7 +30,7 @@ Amped is a Java-based, cloud-native, reference architecture using many Open Sour
   * Good for decomposition / [Component](http://camel.apache.org/components.html) based (routes/components)
   * Service Orchestration
   * Cross-JVM communications
-* [Hysterix](http://christopher-batey.blogspot.com/2014/08/using-hystrix-with-dropwizard.html) for fault tolerance
+* [Hystrix](http://christopher-batey.blogspot.com/2014/08/using-hystrix-with-dropwizard.html) for fault tolerance
   * Command Pattern
   * Circuit Breaker
   * Fallback & Degrade Abilities
