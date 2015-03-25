@@ -8,7 +8,7 @@ Overview
 ========
 Amped is a Java-based, cloud-native, reference architecture using many Open Source projects including the following:
 
-* [Dropwizard](http://dropwizard.readthedocs.org/en/latest/getting-started.html) for microservin'
+* [Dropwizard](http://dropwizard.io/getting-started.html) for microservin'
   * [Jetty](http://www.eclipse.org/jetty/) for HTTP servin'.
   * [Jersey](http://jersey.java.net/) for REST modelin'.
   * [Jackson](http://jackson.codehaus.org) for JSON parsin' and generatin'.
@@ -30,7 +30,7 @@ Amped is a Java-based, cloud-native, reference architecture using many Open Sour
   * Good for decomposition / [Component](http://camel.apache.org/components.html) based (routes/components)
   * Service Orchestration
   * Cross-JVM communications
-* [Hysterix](http://http://christopher-batey.blogspot.com/2014/08/using-hystrix-with-dropwizard.html/) for fault tolerance
+* [Hystrix](http://christopher-batey.blogspot.com/2014/08/using-hystrix-with-dropwizard.html) for fault tolerance
   * Command Pattern
   * Circuit Breaker
   * Fallback & Degrade Abilities
